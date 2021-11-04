@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "05132f80-6c0d-4401-b523-c44edbaca550",
+		"name": "Exchange Rates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Rates From Federal Institute",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://federal-institute.sandbox.swing.dev/rates/?base=EUR&target=PLN",
+					"protocol": "https",
+					"host": [
+						"federal-institute",
+						"sandbox",
+						"swing",
+						"dev"
+					],
+					"path": [
+						"rates",
+						""
+					],
+					"query": [
+						{
+							"key": "base",
+							"value": "EUR"
+						},
+						{
+							"key": "target",
+							"value": "PLN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rates From Central Bank",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-APIKEY",
+						"value": "SWING",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://central-bank.sandbox.swing.dev/exchange/v1/",
+					"protocol": "https",
+					"host": [
+						"central-bank",
+						"sandbox",
+						"swing",
+						"dev"
+					],
+					"path": [
+						"exchange",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rates From Rest API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/exchange-rate?from=USD&to=EUR",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange-rate"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "USD"
+						},
+						{
+							"key": "to",
+							"value": "EUR"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
