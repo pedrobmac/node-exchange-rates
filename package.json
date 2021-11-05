@@ -5,7 +5,7 @@
   "main": "./api/index.js",
   "scripts": {
     "start": "nodemon .api/index.js",
-    "test": "./node_modules/.bin/nodemon --inspect api/index.js"
+    "test": "nodemon --inspect api/index.js"
   },
   "keywords": ["currency", "rates", "exchange", "USD", "EUR", "PLN", "SWD"],
   "author": "Pedro Bittencourt Machado",

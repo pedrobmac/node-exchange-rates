@@ -5,13 +5,13 @@ class RatesServices {
         this.modelName = modelName
     }
 
-    async obtainFromFederalInstitute(currencies) {
-        const address = `https://federal-institute.sandbox.swing.dev/rates/?base=${currencies.from}&target=${currencies.to}`
+    async callFederalInstitute(currencies) {
+        const address = `https://federal-institute.sandbox.swing.dev/rates/?base=${currencies[0]}&target=${currencies[1]}`
         const rates = await axios.get(address)
         return rates.data
     }
 
-    async obtainFromCentralBank() {
+    async callCentralBank() {
         const address = "https://central-bank.sandbox.swing.dev/exchange/v1/"
         const rates = await axios.get(
             address, {
