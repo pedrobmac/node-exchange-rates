@@ -72,7 +72,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/exchange-rate?from=USD&to=EUR",
+					"raw": "localhost:8080/exchange-rate?from=PLN&to=EUR",
 					"host": [
 						"localhost"
 					],
@@ -83,7 +83,7 @@
 					"query": [
 						{
 							"key": "from",
-							"value": "USD"
+							"value": "PLN"
 						},
 						{
 							"key": "to",
